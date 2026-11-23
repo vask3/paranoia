@@ -10,9 +10,8 @@ A battery-free hardware key that lives on my keychain, built around an **RP2040-
 * **Fast Local Text Scrambling:** Short notes, passwords, recovery phrases, and private messages get encrypted and decrypted directly on the chip in milliseconds. Even if a phone or PC has sketchy apps running, the actual key and math stay isolated on my hardware.
 * **Full End-to-End Hardware Build:** I wanted to take a real hardware idea from scratch all the way to a finished board. That meant choosing components, checking datasheets, drawing the schematic, and routing a custom 2-layer PCB in EasyEDA Pro. I also laid out the board to keep the 2.4 GHz Bluetooth antenna clear of copper and wrote the firmware myself.
 
-<img width="383" height="258" alt="image" src="https://github.com" />
-<img width="506" height="263" alt="image" src="https://github.com" />
-
+<img width="383" height="258" alt="image" src="https://github.com/user-attachments/assets/57a5446a-d7d6-4c13-b40e-5fcea5b2d8bd" />
+<img width="506" height="263" alt="image" src="https://github.com/user-attachments/assets/712a0126-5d4d-4082-ad95-2a34a402cea8" />
 
 ---
 
