@@ -22,6 +22,9 @@ A battery-free hardware key that lives on my keychain, built around an **RP2040-
 3. **Send and Process Text:** Send your text to the board over USB Serial or Bluetooth. The RP2040-Zero handles the encryption math locally in firmware without saving keys on your phone or computer.
 4. **Copy and Unplug:** Grab the processed text on your screen and unplug the keychain. Cutting power wipes the RAM immediately.
 
+
+<img width="714" height="393" alt="image" src="https://github.com/user-attachments/assets/00d94b0a-b9cb-4f7a-b79a-dae87c880db7" />
+
 ---
 
 ## Hardware Architecture & Pinout
