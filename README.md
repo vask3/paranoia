@@ -2,9 +2,11 @@
 
 Hello thatis my battery-free hardware key that lives on my keychain.I built it with **RP2040-Zero** and a **JDY-23 BLE module**. 
 
+--
+
 ##How to use?
 
-If you want to lock or unlock secret text you just need to plug it straight into phone or laptop over USB OTG.
+*If you want to lock or unlock secret text you just need to plug it straight into phone or laptop over USB OTG.
 #Js Plug and play!
 
 ---
@@ -36,7 +38,7 @@ If you want to lock or unlock secret text you just need to plug it straight into
 
 The board uses a compact 2-layer layout designed in EasyEDA Pro. All components are soldered on a single side.
 
-| Component | Designator | RP2040 Pin | Function |
+| Component | Name | Pin | What? |
 | :--- | :--- | :--- | :--- |
 | **JDY-23 BLE Module** | `U2` | `GP0` / `GP1` | UART communication (`BLE_RX` / `BLE_TX`) at 3.3V |
 | **Green Status LED** | `LED1` + `R1` (470Ω) | `GP2` | Indicates ready state or successful decryption |
@@ -44,11 +46,6 @@ The board uses a compact 2-layer layout designed in EasyEDA Pro. All components 
 | **Red Status LED** | `LED3` + `R3` (470Ω) | `GP4` | Indicates encryption mode or error state |
 | **Mode Button** | `SW1` | `GP5` | Active-low switch (`BTN_MODE`) to cycle operating modes |
 | **Action Button** | `SW2` | `GP6` | Active-low switch (`BTN_ACTION`) to trigger or confirm tasks |
-
-### Design Choices
-* **Current-Limiting Resistors:** Each 0603 LED (`LED1` to `LED3`) is paired with a `470Ω` resistor (`R1` to `R3`) to keep current draw low while remaining clearly visible in daylight.
-* **Internal Pull-Ups:** Both tactile switches (`KH-6X6X5H-GTM`) connect directly to ground, relying on the RP2040's internal pull-up resistors to save board space.
-* **Power Regulation:** The JDY-23 runs directly off the RP2040-Zero's `3V3` pin, eliminating the need for an external LDO voltage regulator.
 
 ---
 
