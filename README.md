@@ -1,13 +1,18 @@
 # Paranoia: Hardware-Tokenized Text Encryption Keychain
 
-A battery-free hardware key that lives on my keychain, built around an **RP2040-Zero** and a **JDY-23 BLE module**. Whenever I want to lock or unlock secret text, I just plug it straight into my phone or laptop over USB OTG. Everything happens offline right on the microcontroller, so my encryption keys never touch the cloud or external servers. There is also no battery inside waiting to die or puff up in my pocket.
+Hello thatis my battery-free hardware key that lives on my keychain.I built it with **RP2040-Zero** and a **JDY-23 BLE module**. 
+
+##How to use?
+
+If you want to lock or unlock secret text you just need to plug it straight into phone or laptop over USB OTG.
+#Js Plug and play!
 
 ---
 
 ## Why I Built This
 
-* **Zero Battery Hassle:** There is no LiPo or coin cell inside that can swell or drain while sitting on my keys. The board wakes up the instant it gets 5V VBUS power from a USB OTG cable or computer and runs off the RP2040-Zero's built-in 3.3V regulator. The moment I unplug it, power cuts off completely.
-* **Fast Local Text Scrambling:** Short notes, passwords, recovery phrases, and private messages get encrypted and decrypted directly on the chip in milliseconds. Even if a phone or PC has sketchy apps running, the actual key and math stay isolated on my hardware.
+* **No expensive LiPo!!:** There is no LiPo or coin cell inside that can swell or drain while sitting on my keys. The board wakes up the instant it gets 5V VBUS power from a USB cable 
+* **Fast Local Text Scrambling:** Short notes, passwords, recovery phrases, and private messages get encrypted and decrypted directly on the chip in milliseconds. 
 * **Full End-to-End Hardware Build:** I wanted to take a real hardware idea from scratch all the way to a finished board. That meant choosing components, checking datasheets, drawing the schematic, and routing a custom 2-layer PCB in EasyEDA Pro. I also laid out the board to keep the 2.4 GHz Bluetooth antenna clear of copper and wrote the firmware myself.
 
 <img width="383" height="258" alt="image" src="https://github.com/user-attachments/assets/57a5446a-d7d6-4c13-b40e-5fcea5b2d8bd" />
@@ -18,8 +23,8 @@ A battery-free hardware key that lives on my keychain, built around an **RP2040-
 ## How It Works (Data Flow)
 
 1. **Plug In:** Connect the keychain to a phone (via USB OTG) or a laptop over USB-C. 5V VBUS powers the RP2040-Zero, which supplies regulated 3.3V to the JDY-23 BLE module and logic circuits.
-2. **Pick a Mode:** Use the two tactile buttons (`SW1` and `SW2`) to switch between **Encrypt** and **Decrypt** modes (or enable the **BLE Bridge**) while checking the status LEDs to see which state is active.
-3. **Send and Process Text:** Send your text to the board over USB Serial or Bluetooth. The RP2040-Zero handles the encryption math locally in firmware without saving keys on your phone or computer.
+2. **Pick a Mode:** Use the two tactile buttons (`SW1` and `SW2`) to switch between **Encrypt** and **Decrypt** modes (or enable the **BLE Bridge**).
+3. **Send and Process Text:** Send your text to the board over Bluetooth. The RP2040 handles the encryption locally in firmware without saving keys.
 4. **Copy and Unplug:** Grab the processed text on your screen and unplug the keychain. Cutting power wipes the RAM immediately.
 
 
@@ -29,7 +34,7 @@ A battery-free hardware key that lives on my keychain, built around an **RP2040-
 
 ## Hardware Architecture & Pinout
 
-The board uses a compact 2-layer layout designed in EasyEDA Pro. All components sit on a single side to keep the keychain slim and easy to solder.
+The board uses a compact 2-layer layout designed in EasyEDA Pro. All components are soldered on a single side.
 
 | Component | Designator | RP2040 Pin | Function |
 | :--- | :--- | :--- | :--- |
