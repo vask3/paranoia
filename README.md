@@ -4,9 +4,9 @@ Hello thatis my battery-free hardware key that lives on my keychain.I built it w
 
 --
 
-##How to use?
+## How to use?
 
-*If you want to lock or unlock secret text you just need to plug it straight into phone or laptop over USB OTG.
+* **How?** If you want to lock or unlock secret text you just need to plug it straight into phone or laptop over USB OTG.
 #Js Plug and play!
 
 ---
