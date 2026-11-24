@@ -2,8 +2,6 @@
 
 Hello thatis my battery-free hardware key that lives on my keychain.I built it with **RP2040-Zero** and a **JDY-23 BLE module**. 
 
---
-
 ## How to use?
 
 * **How?** If you want to lock or unlock secret text you just need to plug it straight into phone or laptop over USB OTG.
